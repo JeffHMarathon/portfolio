@@ -46,26 +46,7 @@ html {
  * 980px / 16px = 61.25em
 */
 
-/* 1200px / 16px = 75em */
-@media (max-width: 75em) {
-  html {
-    font-size: 60%;
-  }
-}
 
-/* 980px / 16px = 61.25em */
-@media (max-width: 61.25em) {
-  html {
-    font-size: 58%;
-  }
-}
-
-/* 460px / 16px = 28.75em */
-@media (max-width: 28.75em) {
-  html {
-    font-size: 55%;
-  }
-}
 
 /* Base styles */
 
@@ -125,15 +106,7 @@ img {
   margin-right: 2rem;
 }
 
-@media (max-width: 28.75em) {
-  .nav {
-    justify-content: center;
-  }
 
-  .nav-list {
-    margin: 0 1rem;
-  }
-}
 
 .nav-list a {
   display: block;
@@ -190,41 +163,57 @@ img {
   border-bottom: 0.2rem solid var(--main-white);
 }
 
-@media (max-width: 28.75em) {
-  .projects-section-header {
-    font-size: 4rem;
-  }
-}
 
-/* "Automagic" image grid using no media queries */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content:space-around;
   width: 100%;
   max-width: 1280px;
+  max-width: 800px;
   margin: 0 auto;
   margin-bottom: 6rem;
 }
 
-@media (max-width: 30.625em) {
-  .projects-section {
-    padding: 6rem 1rem;
-  }
+.main-panel{
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
 
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
+.main-panel:nth-child(odd) {
+
+}
+
+.main-panel:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.front-panel{
+  width: 49%;
+  margin-top: 10px;
+}
+
+.back-panel{
+  width: 40%;
+  background: var(--main-ligntgray);
+  padding: 15px;
+  margin-bottom: 20px;
+}
 .project {
   background: var(--main-gray);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
+
 }
 
 .code {
-  color: var(--main-gray);
+  color: var(--main-lightgray);
   transition: color 0.3s ease-out;
 }
 
@@ -289,7 +278,8 @@ img {
 
 }
 .faq-section-header{
- margin-bottom: 2rem;
+  padding-top: 40px;
+  margin-bottom: 2rem;
 }
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
@@ -348,11 +338,6 @@ img {
   font-size: 6rem;
 }
 
-@media (max-width: 28.75em) {
-  .contact-section-header > h2 {
-    font-size: 4rem;
-  }
-}
 
 .contact-section-header > p {
   font-style: italic;
@@ -396,9 +381,59 @@ footer i {
   vertical-align: middle;
 }
 
+
+
+
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+  .main-panel{
+    /* width: 45%; */
+  }  
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+/* 770px / 16px = 61.25em */
+@media (max-width: 48.12em) {
+  .main-panel{
+    /* width: 90%; */
+  }  
+}
+
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+}
+
+/* 460px / 16px = 28.75em */
 @media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
   footer {
     flex-direction: column;
     text-align: center;
+  }  
+  .nav {
+    justify-content: center;
   }
+  .nav-list {
+    margin: 0 1rem;
+  }  
+  .projects-section-header {
+    font-size: 4rem;
+  }
+  .contact-section-header > h2 {
+    font-size: 4rem;
+  }    
 }
