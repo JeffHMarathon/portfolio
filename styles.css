@@ -1,9 +1,9 @@
 /* Custom properties/variables  */
 :root {
-  --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
-  --main-gray: #303841;
+  --main-white: #D6D5A8;
+  --main-red: #816797;
+  --main-blue: #51557E;
+  --main-gray: #1B2430;
 }
 
 /* Base reset */
@@ -69,7 +69,7 @@ html {
 /* Base styles */
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: Tahoma, sans-serif;
   font-size: 1.8rem; /* 18px */
   font-weight: 400;
   line-height: 1.4;
@@ -78,7 +78,7 @@ body {
 
 h1,
 h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   text-align: center;
 }
@@ -137,7 +137,7 @@ img {
 .nav-list a {
   display: block;
   font-size: 2.2rem;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .nav-list a:hover {
@@ -162,6 +162,17 @@ img {
   font-weight: 200;
   font-style: italic;
   color: var(--main-red);
+}
+
+.resume-title-image {
+  /* border: 1px solid lightgrey; */
+  height: 400px;
+  width: 400px;
+  background-image: url(img/jeff2.png);
+  background-size: 350px;
+  background-repeat: no-repeat;
+  /* border-radius: 50%; */
+  background-position: 50%;
 }
 
 /* Projects section */
@@ -255,6 +266,57 @@ img {
   margin-left: 10px;
   transform: translateX(0);
   transition: transform 0.3s ease-out;
+}
+
+/*  about section */ 
+
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  /* height: 60vh; */
+  padding: 38px 10%;
+  background: var(--main-gray);
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: var(--main-red);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  color: var(--main-white);
+  border:rgba(0, 0, 0, 0.4) 1px solid;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: var(--main-red);
+}
+.accordion:hover {
+  cursor: hand;
+}
+.accordion-down{
+  position: absolute;
+  right: 12%;
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 18px 18px;
+  background-color: var(--main-white);
+  display: none;
+  /* overflow: hidden; */
+  width: 100%;
+  color: var(--main-blue);
+  text-align: left;
+  
 }
 
 /* Contact section */
