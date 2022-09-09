@@ -4,6 +4,7 @@
   --main-red: #816797;
   --main-blue: #51557E;
   --main-gray: #1B2430;
+  --main-ligntgray: #393e46;
 }
 
 /* Base reset */
@@ -277,14 +278,22 @@ img {
   align-items: center;
   text-align: center;
   width: 100%;
-  /* height: 60vh; */
   padding: 38px 10%;
   background: var(--main-gray);
 }
 
+.faq-content{
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+
+}
+.faq-section-header{
+ margin-bottom: 2rem;
+}
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: var(--main-red);
+  background-color: var(--main-ligntgray);
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -293,19 +302,21 @@ img {
   outline: none;
   transition: 0.4s;
   color: var(--main-white);
-  border:rgba(0, 0, 0, 0.4) 1px solid;
+  border-bottom:rgba(0, 0, 0, 0.4) 1px solid;
+  border-bottom: var(--main-white) 1px solid;
+
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-  background-color: var(--main-red);
+  background-color: var(--main-ligntgray);
 }
 .accordion:hover {
   cursor: hand;
 }
 .accordion-down{
   position: absolute;
-  right: 12%;
+  right: 10px;
 }
 /* Style the accordion panel. Note: hidden by default */
 .panel {
