@@ -1,128 +1,922 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-      <nav id="navbar" class="nav">
-      <ul class="nav-list">
-        <li>
-          <a href="#welcome-section">About</a>
-        </li>
-        <li>
-          <a href="#projects">Work</a>
-        </li>
-        <li>
-          <a href="#faq">FAQ</a>
-        </li>        
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <section id="welcome-section" class="welcome-section">
-      <div class="resume-title-image">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeff Hojka | Software Engineer & Insurance Technology Expert</title>
+  <style>
+    :root {
+      --navy: #0a192f;
+      --navy-light: #112240;
+      --slate: #8892b0;
+      --light-slate: #a8b2d8;
+      --lightest-slate: #ccd6f6;
+      --white: #e6f1ff;
+      --green: #64ffda;
+      --green-tint: rgba(100,255,218,0.07);
+      --font-mono: 'Courier New', monospace;
+    }
 
-			</div>
-      <h1>Hello, my name is Jeff Hojka</h1>
-      <p>Software Engineer and Web Developer</p>
-    </section>
-    <section id="projects" class="projects-section">
-      <h2 class="projects-section-header">Work Projects</h2>
-      <div id ="projects-grid" class="projects-grid"> 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-      </div>
-    </section>
+    html { scroll-behavior: smooth; }
 
-    <section id="more-projects" class="projects-section">
-      <h2 class="projects-section-header">Additional projects</h2>
-      <div id ="more-projects-grid" class="projects-grid"> 
+    body {
+      background-color: var(--navy);
+      color: var(--slate);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-      </div>
-      <a
-        href="https://github.com/JeffHMarathon/"
-        class="btn btn-show-all"
-        target="_blank"
-        >Show github porjects<i class="fas fa-chevron-right"></i
-      ></a> 
-    </section>
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 50px;
+      height: 70px;
+      background: rgba(10,25,47,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(100,255,218,0.08);
+    }
+    .nav-logo {
+      font-family: var(--font-mono);
+      color: var(--green);
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--lightest-slate);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-family: var(--font-mono);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--green); }
+    .nav-links span {
+      color: var(--green);
+      margin-right: 4px;
+    }
 
+    /* ── SECTIONS ── */
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 100px 50px;
+    }
 
-    <section id="faq" class="faq-section">
-      <div class="faq-content">
-        <div class="faq-section-header">
-          <h2>FAQ</h2>
-          <p>A few things clients normally ask me:🙋🏻🙋‍♂️</p>
-        </div>
-        <button class="accordion">How long have you been developing software solutions?<i class="fa fa-chevron-down accordion-down" aria-hidden="true"></i></button>
-        <div class="panel">
-          <p>I have over 35 years of work experiance. Most of that time has been serving small insurance businesses. I have had many long term relationships with my clients.</p>
-        </div>
-      
-        <button class="accordion">What languages do you know?<i class="fa fa-chevron-down accordion-down" aria-hidden="true"></i></button>
-        <div class="panel">
-          <p>I have experiance using Clarion / C / C++ / C# / javascript and various other langurages.</p>
-        </div>        
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 50px;
+      white-space: nowrap;
+    }
+    .section-heading h2 {
+      font-size: 1.7rem;
+      color: var(--lightest-slate);
+      font-weight: 600;
+    }
+    .section-heading .num {
+      font-family: var(--font-mono);
+      color: var(--green);
+      font-size: 1.1rem;
+    }
+    .section-heading::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: rgba(100,255,218,0.15);
+      max-width: 400px;
+    }
 
-        <button class="accordion">Besides developing software, What else have you accomplished?<i class="fa fa-chevron-down accordion-down" aria-hidden="true"></i></button>
-        <div class="panel">
-          <p>One of my major accomplishments was moving the marathon system to a cloud based solution. The cloud solution leverages TSPlus, the IPDriver and NETTALK and is built on a Windows 2019 domain hosted on Windows HyperV.</p>
-        </div>
-        
-        <button class="accordion">Do you have any experiance using SQL?<i class="fa fa-chevron-down accordion-down" aria-hidden="true"></i></button>
-        <div class="panel">
-          <p>Yes i have some work experiance with SQL. I currently do not leverage SQL in our main applications. The main application uses the TPS filesystem and the IPDriver.</p>
-        </div>
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 70px;
+    }
+    .hero-intro {
+      font-family: var(--font-mono);
+      color: var(--green);
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    #hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--lightest-slate);
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    #hero h2 {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      color: var(--slate);
+      font-weight: 600;
+      margin-top: 10px;
+      line-height: 1.2;
+    }
+    #hero p {
+      margin-top: 24px;
+      max-width: 540px;
+      color: var(--slate);
+      font-size: 1.05rem;
+    }
+    .hero-cta {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 16px 28px;
+      border: 1px solid var(--green);
+      color: var(--green);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .hero-cta:hover { background: var(--green-tint); }
 
-        <button class="accordion">What is your favorite band besides Boston?<i class="fa fa-chevron-down accordion-down" aria-hidden="true"></i></button>
-        <div class="panel">
-          <p>My favorite band is by far the Beatles. I am also a big fan or the band Chicago. My musical taste can also vary from jazz, blues, disco, metal and dance.</p>
-        </div>
-        <button class="accordion">What are some of your additional interests?<i class="fa fa-chevron-down accordion-down" aria-hidden="true"></i></button>
-        <div class="panel">
-          <p>One of my hobbies is working with my 3d printers. You can check out some of my projects on facebook at <a href="https://www.facebook.com/Slacker3D" class="btn btn-show-all" target="_blank"> Slacker 3D </a></p>
-        </div>
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .about-text p { margin-bottom: 16px; color: var(--slate); }
+    .about-text a { color: var(--green); text-decoration: none; }
+    .about-text a:hover { text-decoration: underline; }
+    .about-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(100,255,218,0.12);
+      border-radius: 8px;
+      padding: 28px;
+    }
+    .about-card h3 {
+      font-family: var(--font-mono);
+      color: var(--green);
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .about-card ul { list-style: none; }
+    .about-card ul li {
+      color: var(--light-slate);
+      padding: 5px 0;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+    }
+    .about-card ul li::before {
+      content: '▸ ';
+      color: var(--green);
+    }
 
-      </div>
+    /* ── EXPERIENCE ── */
+    .exp-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    .exp-dates {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--slate);
+      padding-top: 4px;
+    }
+    .exp-content h3 {
+      font-size: 1.1rem;
+      color: var(--lightest-slate);
+      font-weight: 600;
+    }
+    .exp-content h3 a {
+      color: var(--lightest-slate);
+      text-decoration: none;
+    }
+    .exp-content h3 a:hover { color: var(--green); }
+    .exp-content .company {
+      font-family: var(--font-mono);
+      color: var(--green);
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+    }
+    .exp-content ul {
+      list-style: none;
+      padding: 0;
+    }
+    .exp-content ul li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+      color: var(--slate);
+      font-size: 0.95rem;
+    }
+    .exp-content ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--green);
+      background: var(--green-tint);
+      border: 1px solid rgba(100,255,218,0.2);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
 
+    /* ── FEATURED PROJECTS ── */
+    .project-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: center;
+      margin-bottom: 80px;
+      position: relative;
+    }
+    .project-featured:nth-child(even) { direction: rtl; }
+    .project-featured:nth-child(even) > * { direction: ltr; }
+    .project-image-box {
+      background: linear-gradient(135deg, var(--navy-light), rgba(100,255,218,0.05));
+      border: 1px solid rgba(100,255,218,0.12);
+      border-radius: 8px;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .project-info {
+      padding: 30px;
+      background: var(--navy-light);
+      border: 1px solid rgba(100,255,218,0.1);
+      border-radius: 8px;
+      margin-left: -30px;
+      z-index: 1;
+      position: relative;
+    }
+    .project-featured:nth-child(even) .project-info { margin-left: 0; margin-right: -30px; }
+    .project-label {
+      font-family: var(--font-mono);
+      color: var(--green);
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .project-info h3 {
+      color: var(--lightest-slate);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .project-info p { font-size: 0.9rem; color: var(--slate); }
+
+    /* ── OTHER PROJECTS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .project-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(100,255,218,0.1);
+      border-radius: 6px;
+      padding: 28px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);
+    }
+    .card-icon { font-size: 1.8rem; margin-bottom: 16px; }
+    .project-card h3 {
+      color: var(--lightest-slate);
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    .project-card p {
+      font-size: 0.85rem;
+      color: var(--slate);
+      flex: 1;
+    }
+    .project-card .tags { margin-top: auto; padding-top: 16px; }
+    .project-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      color: var(--green);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      transition: gap 0.2s;
+    }
+    .project-card-link:hover { gap: 10px; }
+    .project-info .proj-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      color: var(--green);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      transition: gap 0.2s;
+    }
+    .project-info .proj-link:hover { gap: 10px; }
+
+    /* ── FAQ ── */
+    .faq-item {
+      border-bottom: 1px solid rgba(100,255,218,0.1);
+      padding: 24px 0;
+    }
+    .faq-item:first-child { border-top: 1px solid rgba(100,255,218,0.1); }
+    .faq-question {
+      font-size: 1rem;
+      color: var(--lightest-slate);
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 0;
+      color: var(--lightest-slate);
+    }
+    .faq-question::after {
+      content: '+';
+      color: var(--green);
+      font-size: 1.4rem;
+      font-weight: 300;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+      margin-left: 20px;
+    }
+    .faq-item.open .faq-question::after { content: '−'; }
+    .faq-answer {
+      display: none;
+      padding-top: 16px;
+      color: var(--slate);
+      font-size: 0.95rem;
+      max-width: 700px;
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ── CONTACT ── */
+    #contact {
+      text-align: center;
+    }
+    #contact .section-heading { justify-content: center; }
+    #contact .section-heading::after { display: none; }
+    #contact h3 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--lightest-slate);
+      margin: 20px 0 16px;
+    }
+    #contact p {
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border: 1px solid var(--green);
+      color: var(--green);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .contact-link:hover { background: var(--green-tint); }
+    .contact-link.primary {
+      background: var(--green-tint);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--slate);
+      border-top: 1px solid rgba(100,255,218,0.06);
+    }
+    footer a { color: var(--green); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .nav-links { gap: 16px; }
+      section { padding: 80px 24px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .exp-item { grid-template-columns: 1fr; gap: 8px; }
+      .project-featured { grid-template-columns: 1fr; }
+      .project-image-box { display: none; }
+      .project-info { margin-left: 0 !important; margin-right: 0 !important; }
+      .project-featured:nth-child(even) { direction: ltr; }
+    }
+
+    /* ── SCROLL REVEAL (subtle) ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">&lt;JH /&gt;</a>
+    <ul class="nav-links">
+      <li><a href="#about"><span>01.</span>About</a></li>
+      <li><a href="#experience"><span>02.</span>Experience</a></li>
+      <li><a href="#projects"><span>03.</span>Projects</a></li>
+      <li><a href="#faq"><span>04.</span>FAQ</a></li>
+      <li><a href="#contact"><span>05.</span>Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-intro">Hi, my name is</p>
+    <h1>Jeff Hojka.</h1>
+    <h2>I build software for insurance agencies.</h2>
+    <p>
+      I'm a software engineer and entrepreneur based in Matteson, Illinois, with over 35 years of experience
+      building mission-critical software solutions for independent insurance agencies.
+      President of <a href="https://www.mscflexone.com" target="_blank" style="color:var(--green);text-decoration:none;">Khojant LLC</a>
+      and architect of The Marathon System.
+    </p>
+    <a href="#about" class="hero-cta">Learn more about me</a>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-heading reveal">
+      <span class="num">01.</span>
+      <h2>About Me</h2>
+    </div>
 
-    <section id="contact" class="contact-section">
-      <div class="contact-section-header">
-        <h2>Let's work together...</h2>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>
+          Hello! I'm Jeff Hojka, President of <a href="https://www.mscflexone.com" target="_blank">Khojant LLC</a>
+          and the architect behind <strong style="color:var(--light-slate)">The Marathon System</strong> —
+          a cloud-hosted office suite that has been empowering independent insurance agencies since 1982.
+        </p>
+        <p>
+          Over more than three decades, I've built deep expertise in insurance technology, delivering
+          integrated Agency Management and Premium Financing solutions that help agents track customers,
+          manage documents, generate additional revenue, and run their entire office from any device.
+        </p>
+        <p>
+          I'm passionate about translating complex business needs into elegant, long-lasting software.
+          My work spans everything from cloud infrastructure on AWS and Windows Server domains to
+          custom application development in Clarion, C/C++, C#, and JavaScript.
+          One of my proudest achievements was migrating The Marathon System to a fully cloud-based
+          platform using TSPlus, IPDriver, and NETTALK hosted on Windows HyperV.
+        </p>
+        <p>
+          Outside of work, I enjoy 3D printing projects (find me on Facebook as
+          <a href="https://www.facebook.com/Slacker3D" target="_blank">Slacker 3D</a>),
+          and my musical taste runs the full spectrum — from the Beatles and Boston to jazz, blues, and metal.
+        </p>
       </div>
-      <div class="contact-links">
-        <a href="jeff@mscflexone.com"><i class="fas fa-at"></i> Send a mail</a
-        >
+
+      <div>
+        <div class="about-card" style="margin-bottom:20px;">
+          <h3>Languages</h3>
+          <ul>
+            <li>Clarion (Softvelocity)</li>
+            <li>C / C++ / C#</li>
+            <li>JavaScript</li>
+            <li>HTML / CSS</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3>Technologies</h3>
+          <ul>
+            <li>AWS S3 / IAM</li>
+            <li>Windows Server 2019</li>
+            <li>HyperV / Active Directory</li>
+            <li>Nettalk by Capesoft</li>
+            <li>TSPlus / IPDriver</li>
+            <li>REST / SOAP / WebServices</li>
+          </ul>
+        </div>
       </div>
-    </section>
-    <footer>
-      <p>
-        **Not all of the projects are production sites and are included to demonstrate different skills and abilities.
-      </p>
-      <p>
-        &copy; Created by
-        <a href="https://www.khojant.com/" target="_blank"
-          >Khojant LLC</a>
-      </p>
-    </footer>
-    <!-- END FOOTER SECTION -->
-    <script src="index.js"></script>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-heading reveal">
+      <span class="num">02.</span>
+      <h2>Where I've Worked</h2>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-dates">1990 — Present</div>
+      <div class="exp-content">
+        <h3><a href="https://www.mscflexone.com" target="_blank">President &amp; Lead Developer</a></h3>
+        <div class="company">Khojant LLC · Matteson, Illinois</div>
+        <ul>
+          <li>Founded and lead Khojant LLC, the company powering The Marathon System — a cloud-hosted office suite
+              serving independent insurance agencies across the country since 1982.</li>
+          <li>Architected and developed The Marathon System's two flagship products: Agency Management
+              (customer tracking, document management, bank accounts, company statements) and Premium Financing
+              (installment billing, automated payments, profit analytics).</li>
+          <li>Led the migration of The Marathon System from on-premise to a fully cloud-hosted solution using
+              TSPlus, Windows HyperV / Server 2019, Active Directory, Group Policy, and AWS S3.</li>
+          <li>Built a Two-Factor Authentication online customer portal using Clarion, Nettalk WebServer/REST/SOAP,
+              and AWS S3, enabling clients to make payments, print forms, and download documents remotely.</li>
+          <li>Maintained long-term relationships with independent insurance agencies spanning 20+ years,
+              including clients like Anderson Insurance Brokers, Simply Insurance, and Higgins Insurance Agency.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Clarion</span>
+          <span class="tag">AWS S3</span>
+          <span class="tag">Windows Server 2019</span>
+          <span class="tag">HyperV</span>
+          <span class="tag">Active Directory</span>
+          <span class="tag">Nettalk</span>
+          <span class="tag">TSPlus</span>
+          <span class="tag">REST/SOAP</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-dates">Education</div>
+      <div class="exp-content">
+        <h3>Illinois Wesleyan University</h3>
+        <div class="company">Bloomington, Illinois</div>
+        <ul>
+          <li>Studied at Illinois Wesleyan University, building a foundation in computing and problem-solving
+              that has informed over three decades of software development.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-heading reveal">
+      <span class="num">03.</span>
+      <h2>Projects</h2>
+    </div>
+
+    <!-- Featured -->
+    <div class="project-featured reveal">
+      <div class="project-image-box">🏢</div>
+      <div class="project-info">
+        <p class="project-label">Featured Project</p>
+        <h3>The Marathon System</h3>
+        <p>
+          A cloud-hosted office suite for independent insurance agencies, combining Agency Management
+          and Premium Financing in one integrated platform. Running seamlessly in a browser via TSPlus,
+          the system handles customer tracking, document management, premium billing, and more —
+          serving agencies across the country for over 40 years.
+        </p>
+        <div class="tags">
+          <span class="tag">Clarion</span>
+          <span class="tag">TSPlus</span>
+          <span class="tag">AWS S3</span>
+          <span class="tag">HyperV</span>
+          <span class="tag">Nettalk</span>
+        </div>
+        <a href="https://www.mscflexone.com/" target="_blank" class="proj-link">Visit Site →</a>
+      </div>
+    </div>
+
+    <div class="project-featured reveal">
+      <div class="project-image-box">🔐</div>
+      <div class="project-info">
+        <p class="project-label">Featured Project</p>
+        <h3>Marathon System Online Portal</h3>
+        <p>
+          A secure customer-facing web portal for The Marathon System, giving clients access to their data,
+          credit card payment processing, printable forms, and document downloads. Features Two-Factor
+          Authentication via SMS or Email for added security.
+        </p>
+        <div class="tags">
+          <span class="tag">Clarion</span>
+          <span class="tag">Nettalk REST/SOAP</span>
+          <span class="tag">AWS S3</span>
+          <span class="tag">HTML/CSS/JS</span>
+          <span class="tag">2FA</span>
+        </div>
+        <a href="http://www.mscflexone.com/Tutorials/WWW%20-%20Give%20your%20customers%20web%20access%20to%20their%20account.mp4" target="_blank" class="proj-link">Watch Demo →</a>
+      </div>
+    </div>
+
+    <!-- Other projects -->
+    <h3 style="color:var(--lightest-slate); font-size:1.1rem; margin: 60px 0 24px; text-align:center;">
+      Other Noteworthy Projects
+    </h3>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="card-icon">🌐</div>
+        <h3>Khojant LLC Landing Page</h3>
+        <p>Company landing page for Khojant LLC, built with responsive design principles.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+        <a href="https://khojant.com/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">📱</div>
+        <h3>MaxString Landing Page</h3>
+        <p>Responsive landing page for MaxString built with a mobile-first approach.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+        <a href="https://jeffhmarathon.github.io/maxstrong-landing-page/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">🎸</div>
+        <h3>Original Trombones Product Page</h3>
+        <p>Simple product website integrating YouTube video to showcase Original Trombones.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">YouTube API</span></div>
+        <a href="https://jeffhmarathon.github.io/product-landing-page/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">🔍</div>
+        <h3>YouTube Search App</h3>
+        <p>Demonstrates consuming the YouTube Data API with search functionality built in HTML, CSS, and JS.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">YouTube API</span></div>
+        <a href="https://jeffhmarathon.github.io/youtube-page/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">📷</div>
+        <h3>Pexels Image Search</h3>
+        <p>A demo app using the Pexels API to search and display stock photography results.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Pexels API</span></div>
+        <a href="https://jeffhmarathon.github.io/pexels-search-page/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">🍔</div>
+        <h3>Quick Order Menu</h3>
+        <p>Responsive quick-order menu interface for both mobile and desktop using HTML and CSS.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span></div>
+        <a href="https://jeffhmarathon.github.io/order-menu/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">🛒</div>
+        <h3>E-Commerce Quiz</h3>
+        <p>Interactive quiz and results page using JavaScript, CSS, and HTML.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+        <a href="https://jeffhmarathon.github.io/ecommerce-quiz/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">💬</div>
+        <h3>Quote Slider</h3>
+        <p>A lightweight quote slider component designed for integration into larger websites.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
+        <a href="https://jeffhmarathon.github.io/slider-section/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">🎮</div>
+        <h3>Mario CSS Animation</h3>
+        <p>A fun animation project bringing Mario to life using pure CSS and HTML.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+        <a href="https://jeffhmarathon.github.io/mario-animation/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">✍️</div>
+        <h3>Blog Page</h3>
+        <p>A blog layout project using HTML and CSS with clean typography and structure.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+        <a href="https://jeffhmarathon.github.io/blog-site/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">📄</div>
+        <h3>Technical Documentation Page</h3>
+        <p>Website used for technical documentation with sidebar menu navigation.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+        <a href="https://jeffhmarathon.github.io/technical-documentation-page/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">📋</div>
+        <h3>Survey Form</h3>
+        <p>A survey form using several HTML form elements — checkboxes, dropdowns, radio buttons, and more.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+        <a href="https://jeffhmarathon.github.io/survey-form/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">🎵</div>
+        <h3>Tribute to Boston</h3>
+        <p>A tribute page to one of the great bands of the 70s, built with responsive design.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span></div>
+        <a href="https://jeffhmarathon.github.io/tribute-to-boston/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="card-icon">📑</div>
+        <h3>Resume Page</h3>
+        <p>A clean, simple resume page built with HTML and CSS.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+        <a href="https://jeffhmarathon.github.io/resume-page/" target="_blank" class="project-card-link">View Project →</a>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:40px; font-size:0.85rem; color:var(--slate); font-style:italic;">
+      * Not all projects are production sites — some are included to demonstrate different skills and techniques.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-heading reveal">
+      <span class="num">04.</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="reveal">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How long have you been developing software solutions?
+        </button>
+        <div class="faq-answer">
+          I have over 35 years of professional software development experience. The vast majority of that time has been
+          dedicated to serving small, independent insurance businesses. I'm proud of the many long-term client
+          relationships I've built — some spanning over 20 years.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What languages and technologies do you work with?
+        </button>
+        <div class="faq-answer">
+          My primary language is Clarion by Softvelocity, which I've used to build The Marathon System. I also have
+          experience with C, C++, C#, JavaScript, HTML, and CSS. On the infrastructure side, I work with AWS S3 / IAM,
+          Windows Server 2019, Windows HyperV, Active Directory, Group Policy, Nettalk by Capesoft (WebServices,
+          WebPortal, Email, SMS), and TSPlus for cloud delivery.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is The Marathon System?
+        </button>
+        <div class="faq-answer">
+          The Marathon System is a cloud-hosted office suite I architected for independent insurance agencies. It provides
+          two integrated products — Agency Management and Premium Financing — in one platform. Agency Management handles
+          customer tracking, documents, company statements, and bank accounts. Premium Financing helps agencies generate
+          additional revenue from their existing client base through in-house installment billing. Visit
+          <a href="https://www.mscflexone.com" target="_blank">mscflexone.com</a> to learn more.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What was your biggest technical achievement?
+        </button>
+        <div class="faq-answer">
+          One of my proudest accomplishments was migrating The Marathon System to a fully cloud-based solution.
+          The cloud platform leverages TSPlus, the IPDriver, and NETTALK, and is built on a Windows Server 2019
+          domain hosted on Windows HyperV. This allowed agencies to run the full system from any browser,
+          from anywhere, without any local software installation.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you have experience with SQL?
+        </button>
+        <div class="faq-answer">
+          Yes, I have professional experience with SQL. The main Marathon System application currently uses the
+          TPS file system and the IPDriver, but I've worked with relational databases in other contexts and
+          understand both approaches well.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What are some of your personal interests?
+        </button>
+        <div class="faq-answer">
+          I'm an avid 3D printing enthusiast — you can follow my projects on Facebook under "Slacker 3D."
+          Musically, my all-time favorites are the Beatles and Boston, but my taste spans jazz, blues, disco,
+          metal, and dance. I'm a lifelong Chicago-area music fan.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-heading reveal" style="justify-content:center;">
+      <span class="num">05.</span>
+      <h2>Get In Touch</h2>
+    </div>
+
+    <h3 class="reveal">Let's Work Together</h3>
+    <p class="reveal">
+      Whether you're an insurance agency looking for a modern software solution, or you'd like to
+      collaborate on a development project — I'd love to hear from you.
+    </p>
+
+    <div class="contact-links reveal">
+      <a href="mailto:sales@khojant.com" class="contact-link primary">✉ Email Me</a>
+      <a href="https://www.mscflexone.com" target="_blank" class="contact-link">🌐 The Marathon System</a>
+      <a href="https://www.linkedin.com/in/jeffhojka7083610001/" target="_blank" class="contact-link">in LinkedIn</a>
+      <a href="https://github.com/jeffhmarathon" target="_blank" class="contact-link">⌥ GitHub</a>
+    </div>
+
+    <p style="margin-top:20px; font-size:0.85rem;">
+      📞 <a href="tel:7083610001" style="color:var(--green);text-decoration:none;">708-361-0001</a>
+      &nbsp;·&nbsp; Matteson, Illinois
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed & Built by Jeff Hojka &amp; <a href="https://www.mscflexone.com">Khojant LLC</a> · 2026</p>
+    <p style="margin-top:6px; font-size:0.75rem;">
+      <a href="https://github.com/jeffhmarathon/portfolio" target="_blank">View Source on GitHub</a>
+    </p>
+  </footer>
+
+  <script>
+    // FAQ toggle
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      item.classList.toggle('open');
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
 </html>
