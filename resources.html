@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | Khojant LLC | Data Management Partners &amp; Industry Links</title>
+  <meta name="description" content="Khojant LLC curated resources — trusted partners, industry associations, compliance tools, and technology references for insurance agencies and financial data professionals."/>
+  <meta name="keywords" content="insurance agency resources, data management tools, IIABA, ACORD, Zywave, eek design, insurance technology, financial data compliance, Khojant LLC"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.khojant.com/resources.html"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Resources | Khojant LLC | Partners &amp; Industry Links"/>
+  <meta property="og:description" content="Trusted partners, industry associations, compliance standards, and technology resources curated by Khojant LLC — data management experts for insurance and financial firms."/>
+  <meta property="og:url" content="https://www.khojant.com/resources.html"/>
+  <meta property="og:site_name" content="Khojant LLC"/>
+  <meta property="og:image" content="https://www.khojant.com/Khojant.png"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Resources | Khojant LLC"/>
+  <meta name="twitter:description" content="Partners, industry associations, compliance tools, and technology resources for insurance and financial data professionals."/>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Resources – Khojant LLC",
+    "url": "https://www.khojant.com/resources.html",
+    "description": "Trusted partners and industry resource links curated by Khojant LLC.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Khojant LLC",
+      "url": "https://www.khojant.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Khojant LLC",
+      "url": "https://www.khojant.com",
+      "logo": "https://www.khojant.com/Khojant.png"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #000000;
+      --surface: #080810;
+      --surface2: #0e0e1c;
+      --border: #1a2050;
+      --blue: #1A6BFF;
+      --gold: #FFB800;
+      --text: #FFFFFF;
+      --muted: #6080B0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    canvas#bg-canvas {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 0; pointer-events: none;
+    }
+
+    /* ── TICKER ── */
+    .ticker-wrap {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+      background: var(--surface); border-bottom: 1px solid var(--border);
+      height: 36px; overflow: hidden;
+    }
+    .ticker-scroll { display: flex; align-items: center; height: 100%; overflow: hidden; position: relative; }
+    .ticker-track {
+      display: flex; white-space: nowrap; gap: 0;
+      animation: ticker-move 38s linear infinite;
+    }
+    .ticker-item {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 0 40px; font-size: 11px; letter-spacing: 0.08em;
+      color: var(--muted); font-family: 'Space Mono', monospace;
+    }
+    .ticker-item .dot { color: var(--gold); }
+    .ticker-phone {
+      position: absolute; right: 0; top: 0; height: 100%;
+      background: var(--blue); color: #fff; border: none;
+      font-family: 'Space Mono', monospace; font-size: 12px;
+      letter-spacing: 0.06em; padding: 0 18px; cursor: pointer;
+      display: flex; align-items: center; gap: 7px;
+      text-decoration: none; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .ticker-phone:hover { background: #0f52cc; }
+    @keyframes ticker-move { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 36px; left: 0; width: 100%; z-index: 99;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw; height: 68px;
+      background: rgba(0,0,0,0.92); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+    .nav-logo img { height: 42px; width: auto; display: block; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--text); border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-links { display: flex; align-items: center; gap: 6px; list-style: none; }
+    .nav-links a { color: var(--muted); font-size: 13px; letter-spacing: 0.05em; text-decoration: none; padding: 8px 12px; border-radius: 4px; transition: color 0.2s; text-transform: uppercase; font-weight: 500; }
+    .nav-links a:hover { color: #fff; }
+    .nav-links .nav-cta { background: var(--blue); color: #fff; padding: 8px 16px; }
+    .nav-links .nav-cta:hover { background: #0f52cc; }
+
+    /* ── PAGE WRAPPER ── */
+    main { position: relative; z-index: 1; padding-top: 104px; }
+
+    /* ── HERO ── */
+    #page-hero {
+      padding: 80px 5vw 60px;
+      text-align: center;
+    }
+    .page-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px; letter-spacing: 0.18em;
+      color: var(--gold); margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    #page-hero h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900; line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    #page-hero h1 em { font-style: normal; color: var(--blue); }
+    #page-hero p {
+      font-size: 18px; color: var(--muted);
+      max-width: 620px; margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── SECTIONS ── */
+    section { position: relative; z-index: 1; padding: 72px 5vw; }
+    section:nth-child(even) { background: var(--surface); }
+
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px; letter-spacing: 0.2em;
+      color: var(--gold); margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800; margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .section-title em { font-style: normal; color: var(--blue); }
+    .section-desc { color: var(--muted); max-width: 600px; line-height: 1.7; margin-bottom: 48px; }
+
+    /* ── PARTNER CARDS ── */
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+    .partner-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      position: relative;
+      transition: border-color 0.25s, transform 0.25s;
+      overflow: hidden;
+    }
+    .partner-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue), var(--gold));
+    }
+    .partner-card:hover { border-color: var(--blue); transform: translateY(-4px); }
+    .partner-badge {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 10px; letter-spacing: 0.15em;
+      color: var(--gold); background: rgba(255,184,0,0.08);
+      border: 1px solid rgba(255,184,0,0.2);
+      border-radius: 4px; padding: 3px 10px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .partner-card h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .partner-card .partner-url {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px; color: var(--blue); margin-bottom: 16px;
+    }
+    .partner-card p { color: var(--muted); font-size: 14px; line-height: 1.7; margin-bottom: 24px; }
+    .partner-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+    .partner-tag {
+      font-size: 11px; padding: 4px 10px; border-radius: 4px;
+      background: rgba(26,107,255,0.1); border: 1px solid rgba(26,107,255,0.25);
+      color: #8ab4ff; font-family: 'Space Mono', monospace; letter-spacing: 0.04em;
+    }
+    .partner-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: #fff; font-size: 13px; font-weight: 600;
+      text-decoration: none; letter-spacing: 0.05em;
+      border: 1px solid var(--border); border-radius: 6px;
+      padding: 10px 20px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .partner-link:hover { border-color: var(--blue); background: rgba(26,107,255,0.08); }
+    .partner-link-primary {
+      background: var(--blue); border-color: var(--blue);
+    }
+    .partner-link-primary:hover { background: #0f52cc; border-color: #0f52cc; }
+
+    /* ── RESOURCE LINK GRID ── */
+    .resource-cats { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+    .resource-cat {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 24px;
+      transition: border-color 0.2s;
+    }
+    .resource-cat:hover { border-color: rgba(26,107,255,0.4); }
+    .resource-cat-icon {
+      font-size: 28px; margin-bottom: 14px;
+    }
+    .resource-cat h4 {
+      font-size: 15px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--gold); margin-bottom: 16px;
+      font-family: 'Space Mono', monospace;
+    }
+    .resource-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .resource-list a {
+      color: var(--muted); font-size: 14px; text-decoration: none;
+      display: flex; align-items: center; gap: 8px;
+      transition: color 0.2s;
+    }
+    .resource-list a::before {
+      content: '→'; color: var(--blue); font-size: 12px; flex-shrink: 0;
+    }
+    .resource-list a:hover { color: #fff; }
+    .resource-list .res-desc {
+      display: block; font-size: 11px; color: rgba(96,128,176,0.7);
+      margin-top: 2px; padding-left: 20px;
+    }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background: linear-gradient(135deg, #060616 0%, #0a0a28 100%);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 56px 48px;
+      text-align: center;
+    }
+    .cta-strip h2 { font-size: clamp(24px, 4vw, 38px); font-weight: 800; margin-bottom: 16px; }
+    .cta-strip h2 em { font-style: normal; color: var(--gold); }
+    .cta-strip p { color: var(--muted); margin-bottom: 32px; font-size: 16px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--blue); color: #fff; text-decoration: none;
+      padding: 14px 28px; border-radius: 6px; font-weight: 700;
+      font-size: 14px; letter-spacing: 0.05em;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #0f52cc; }
+    .btn-secondary {
+      border: 1px solid var(--border); color: var(--text); text-decoration: none;
+      padding: 14px 28px; border-radius: 6px; font-weight: 600;
+      font-size: 14px; letter-spacing: 0.05em;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--blue); background: rgba(26,107,255,0.06); }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 36px 5vw;
+      display: flex; flex-direction: column; align-items: center; gap: 20px;
+      background: var(--surface);
+    }
+    .footer-logo img { height: 34px; width: auto; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; }
+    .footer-links a { color: var(--muted); font-size: 13px; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { color: var(--muted); font-size: 12px; font-family: 'Space Mono', monospace; }
+
+    /* ── REVEAL ANIMATION ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s, transform 0.6s; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none; flex-direction: column; align-items: flex-start;
+        position: absolute; top: 68px; left: 0; right: 0;
+        background: rgba(0,0,0,0.98); border-bottom: 1px solid var(--border);
+        padding: 16px 5vw 24px; gap: 0;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 12px 0; font-size: 15px; border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child a { border-bottom: none; margin-top: 12px; text-align: center; }
+      .partner-grid { grid-template-columns: 1fr; }
+      .resource-cats { grid-template-columns: 1fr; }
+      .cta-strip { padding: 40px 24px; }
+      .ticker-phone { font-size: 11px; padding: 0 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-scroll">
+    <div class="ticker-track" id="ticker-track"></div>
+    <a href="tel:+17083610001" class="ticker-phone">📞 (708) 361-0001</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="Khojant.png" alt="Khojant LLC – Data Management Experts" />
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#team">Team</a></li>
+    <li><a href="index.html#stack">Technology</a></li>
+    <li><a href="index.html#marathon">Marathon System</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="index.html#contact" class="nav-cta">GET IN TOUCH</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section id="page-hero">
+    <div class="page-eyebrow">KHOJANT LLC · RESOURCES &amp; PARTNERS</div>
+    <h1>Tools &amp; Partners We <em>Trust.</em></h1>
+    <p>A curated collection of trusted partners, industry associations, compliance standards, and technology resources for insurance agencies and financial data professionals.</p>
+  </section>
+
+  <!-- PARTNERS -->
+  <section id="partners">
+    <div class="section-label">TRUSTED PARTNERS</div>
+    <h2 class="section-title reveal">Organizations We <em>Work With</em></h2>
+    <p class="section-desc reveal">We collaborate with these partners to deliver comprehensive solutions across design, technology, and insurance operations.</p>
+
+    <div class="partner-grid">
+
+      <!-- eek! design -->
+      <div class="partner-card reveal">
+        <div class="partner-badge">Design Partner</div>
+        <h3>eek! design</h3>
+        <div class="partner-url">eekdesign.net</div>
+        <p>Award-winning graphic design, brand identity, and web design studio. Emily and her team bring deep expertise in visual storytelling — crafting logos, marketing materials, and digital experiences that make brands unforgettable. When Khojant delivers a data-powered platform, eek! design makes sure it looks the part.</p>
+        <div class="partner-tags">
+          <span class="partner-tag">Brand Identity</span>
+          <span class="partner-tag">Graphic Design</span>
+          <span class="partner-tag">Web Design</span>
+          <span class="partner-tag">Marketing</span>
+          <span class="partner-tag">Print &amp; Digital</span>
+        </div>
+        <a href="https://www.eekdesign.net/" target="_blank" rel="noopener" class="partner-link partner-link-primary">Visit eekdesign.net →</a>
+      </div>
+
+      <!-- Zywave -->
+      <div class="partner-card reveal">
+        <div class="partner-badge">Technology Partner</div>
+        <h3>Zywave</h3>
+        <div class="partner-url">zywave.com</div>
+        <p>Industry-leading insurance technology platform serving 15,000+ agencies and brokerages worldwide. Zywave provides agency management systems, AI-powered quoting tools, compliance content, and client engagement solutions. Their platform powers modern insurance operations — and integrates seamlessly with the data workflows Khojant specializes in.</p>
+        <div class="partner-tags">
+          <span class="partner-tag">Agency Management</span>
+          <span class="partner-tag">AI Quoting</span>
+          <span class="partner-tag">Compliance</span>
+          <span class="partner-tag">InsurTech</span>
+          <span class="partner-tag">Client Portal</span>
+        </div>
+        <a href="https://www.zywave.com/" target="_blank" rel="noopener" class="partner-link partner-link-primary">Visit zywave.com →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INDUSTRY RESOURCES -->
+  <section id="industry-links">
+    <div class="section-label">INDUSTRY RESOURCES</div>
+    <h2 class="section-title reveal">Essential Links for <em>Professionals</em></h2>
+    <p class="section-desc reveal">Authoritative resources across insurance, data standards, compliance, and technology — vetted and used by our team.</p>
+
+    <div class="resource-cats">
+
+      <!-- Insurance Associations -->
+      <div class="resource-cat reveal">
+        <div class="resource-cat-icon">🏛️</div>
+        <h4>Insurance Associations</h4>
+        <ul class="resource-list">
+          <li>
+            <a href="https://www.iiaba.net/" target="_blank" rel="noopener">
+              IIABA – Independent Insurance Agents &amp; Brokers of America
+              <span class="res-desc">The largest insurance trade association in the U.S.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.pianational.org/" target="_blank" rel="noopener">
+              PIA National – Professional Insurance Agents
+              <span class="res-desc">Advocacy and resources for independent agents nationwide.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.naic.org/" target="_blank" rel="noopener">
+              NAIC – National Association of Insurance Commissioners
+              <span class="res-desc">State insurance regulation coordination &amp; model laws.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.insurancejournal.com/" target="_blank" rel="noopener">
+              Insurance Journal
+              <span class="res-desc">Leading P&amp;C insurance news and market intelligence.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Data &amp; Compliance Standards -->
+      <div class="resource-cat reveal">
+        <div class="resource-cat-icon">📋</div>
+        <h4>Data &amp; Compliance Standards</h4>
+        <ul class="resource-list">
+          <li>
+            <a href="https://www.acord.org/" target="_blank" rel="noopener">
+              ACORD – Insurance Industry Data Standards
+              <span class="res-desc">Global insurance data standards and forms authority.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.cfainstitute.org/en/ethics-standards/codes/gips-standards" target="_blank" rel="noopener">
+              GIPS Standards – CFA Institute
+              <span class="res-desc">Global Investment Performance Standards for financial firms.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act" target="_blank" rel="noopener">
+              FTC – Gramm-Leach-Bliley Act (GLBA)
+              <span class="res-desc">Financial data privacy and safeguards rule compliance.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener">
+              NIST Cybersecurity Framework
+              <span class="res-desc">Federal standards for managing cybersecurity risk.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Financial Tools -->
+      <div class="resource-cat reveal">
+        <div class="resource-cat-icon">💼</div>
+        <h4>Financial &amp; Accounting Tools</h4>
+        <ul class="resource-list">
+          <li>
+            <a href="https://quickbooks.intuit.com/" target="_blank" rel="noopener">
+              QuickBooks by Intuit
+              <span class="res-desc">Accounting and financial management platform we integrate with daily.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.sec.gov/cgi-bin/browse-edgar" target="_blank" rel="noopener">
+              SEC EDGAR – Financial Filings
+              <span class="res-desc">Public company filings, financial disclosures, and reporting data.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">
+              FRED – Federal Reserve Economic Data
+              <span class="res-desc">800,000+ economic data series from the St. Louis Fed.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener">
+              IRS Small Business Center
+              <span class="res-desc">Tax guidance, forms, and resources for small business owners.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Technology Resources -->
+      <div class="resource-cat reveal">
+        <div class="resource-cat-icon">⚙️</div>
+        <h4>Technology Resources</h4>
+        <ul class="resource-list">
+          <li>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noopener">
+              Amazon Web Services (AWS)
+              <span class="res-desc">Cloud infrastructure powering many of our client solutions.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://azure.microsoft.com/" target="_blank" rel="noopener">
+              Microsoft Azure
+              <span class="res-desc">Enterprise cloud platform with strong compliance and security tools.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.python.org/" target="_blank" rel="noopener">
+              Python.org
+              <span class="res-desc">Core language for data processing, automation, and analytics.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://powerbi.microsoft.com/" target="_blank" rel="noopener">
+              Microsoft Power BI
+              <span class="res-desc">Business intelligence and data visualization platform.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Regulatory Guidance -->
+      <div class="resource-cat reveal">
+        <div class="resource-cat-icon">⚖️</div>
+        <h4>Regulatory &amp; Legal Guidance</h4>
+        <ul class="resource-list">
+          <li>
+            <a href="https://www.dfs.ny.gov/industry_guidance/cybersecurity" target="_blank" rel="noopener">
+              NY DFS Cybersecurity Regulation (23 NYCRR 500)
+              <span class="res-desc">Cybersecurity requirements for financial services companies in NY.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.consumerfinance.gov/" target="_blank" rel="noopener">
+              CFPB – Consumer Financial Protection Bureau
+              <span class="res-desc">Financial consumer protection rules and guidance.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener">
+              ISO/IEC 27001 Information Security
+              <span class="res-desc">International standard for information security management systems.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.soc2.com/" target="_blank" rel="noopener">
+              SOC 2 Compliance Overview
+              <span class="res-desc">Trust services criteria for data security and availability.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Learning &amp; Development -->
+      <div class="resource-cat reveal">
+        <div class="resource-cat-icon">📚</div>
+        <h4>Learning &amp; Development</h4>
+        <ul class="resource-list">
+          <li>
+            <a href="https://www.theinstitutes.org/" target="_blank" rel="noopener">
+              The Institutes – Insurance Education
+              <span class="res-desc">CPCU, ARe, and professional insurance designations and courses.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.datacamp.com/" target="_blank" rel="noopener">
+              DataCamp
+              <span class="res-desc">Online learning platform for data science and analytics skills.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.coursera.org/browse/data-science" target="_blank" rel="noopener">
+              Coursera – Data Science
+              <span class="res-desc">University-backed data science and machine learning courses.</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/learning/" target="_blank" rel="noopener">
+              LinkedIn Learning
+              <span class="res-desc">Business, tech, and professional development video courses.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta-section" style="padding: 72px 5vw;">
+    <div class="cta-strip reveal">
+      <h2>Have a Resource to <em>Recommend?</em></h2>
+      <p>We're always looking to expand this list. If you work with a tool or organization that should be here, let us know.</p>
+      <div class="cta-btns">
+        <a href="index.html#contact" class="btn-primary">Get In Touch →</a>
+        <a href="index.html#services" class="btn-secondary">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="footer-logo">
+    <img src="Khojant.png" alt="Khojant LLC" />
+  </a>
+  <div class="footer-links">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#team">Team</a>
+    <a href="index.html#marathon">Marathon System</a>
+    <a href="https://www.mscflexone.com" target="_blank" rel="noopener">mscflexone.com</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="resources.html">Resources</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+  <div class="footer-copy">© 2026 Khojant LLC · Matteson, Illinois</div>
+</footer>
+
+<script>
+// ── CANVAS ──
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+let W, H, particles = [];
+
+function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+
+function initParticles() {
+  particles = [];
+  const count = Math.min(Math.floor((W * H) / 16000), 80);
+  for (let i = 0; i < count; i++) {
+    particles.push({
+      x: Math.random()*W, y: Math.random()*H,
+      vx: (Math.random()-0.5)*0.28, vy: (Math.random()-0.5)*0.28,
+      r: Math.random()*1.4+0.3, alpha: Math.random()*0.35+0.08,
+      gold: Math.random() < 0.08
+    });
+  }
+}
+
+function drawBg() {
+  ctx.clearRect(0,0,W,H);
+  ctx.strokeStyle = 'rgba(26,107,255,0.015)';
+  ctx.lineWidth = 1;
+  for (let x=0;x<W;x+=90){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+  for (let y=0;y<H;y+=90){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+  for (let i=0;i<particles.length;i++) {
+    for (let j=i+1;j<particles.length;j++) {
+      const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
+      const dist=Math.sqrt(dx*dx+dy*dy);
+      if (dist<160) {
+        ctx.strokeStyle=`rgba(26,107,255,${0.05*(1-dist/160)})`;
+        ctx.lineWidth=0.5;
+        ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);
+        ctx.lineTo(particles[j].x,particles[j].y);ctx.stroke();
+      }
+    }
+  }
+  particles.forEach(p=>{
+    p.x+=p.vx; p.y+=p.vy;
+    if(p.x<0||p.x>W)p.vx*=-1;
+    if(p.y<0||p.y>H)p.vy*=-1;
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle = p.gold
+      ? `rgba(255,184,0,${p.alpha})`
+      : `rgba(26,107,255,${p.alpha})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(drawBg);
+}
+window.addEventListener('resize', ()=>{ resize(); initParticles(); });
+resize(); initParticles(); drawBg();
+
+// ── TICKER ──
+const msgs = [
+  'Data Management Experts',
+  'Custom Software Solutions',
+  'Insurance Agency Technology',
+  'Financial Data Reconciliation',
+  'Cloud Architecture',
+  'Business Intelligence',
+  'Marathon System — Built for Insurance',
+  '35+ Years of Excellence',
+  'Matteson, Illinois'
+];
+const track = document.getElementById('ticker-track');
+const doubled = [...msgs, ...msgs];
+track.innerHTML = doubled.map(m=>`<span class="ticker-item"><span class="dot">◆</span>${m}</span>`).join('');
+
+// ── HAMBURGER ──
+const ham = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+ham.addEventListener('click', ()=>{
+  const open = navLinks.classList.toggle('open');
+  ham.classList.toggle('open', open);
+  ham.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click', ()=>{
+    navLinks.classList.remove('open');
+    ham.classList.remove('open');
+    ham.setAttribute('aria-expanded', false);
+  });
+});
+
+// ── SCROLL REVEAL ──
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
